@@ -29,4 +29,9 @@ rake db:migrate
 rails db:seed
 ```
 
+*Roputes
+```Ruby
+http://localhost:3000/brands
+```
+
 * How to run the test suite
