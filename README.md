@@ -29,7 +29,7 @@ rake db:migrate
 rails db:seed
 ```
 
-*Roputes
+*Routes
 ```Ruby
 http://localhost:3000/brands
 ```
