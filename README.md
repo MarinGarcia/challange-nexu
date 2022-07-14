@@ -46,3 +46,13 @@ rake db:migrate RAILS_ENV=test
 rake db:seed RAILS_ENV=test
 rspec
 ```
+### Notas
+> Fue divertido la prueba realizar un API desde cero hay muchas que se pueden
+> implementar, sin embargo, dado el tiempo es imposible como feedback puedo
+> comentar los siguiente:
+>
+> No pude agregar la validacion unique a la columna name de brands porque en el
+> json seed que nos proporciana ya existe data repetida.
+>
+> Me faltaron agregar mas pruebas sin embargo el enfoque seria el mismo, probar tanto
+> happy path como bad path, me faltaron algunos metodos de los modelos.
