@@ -6,7 +6,7 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-ruby-3.1.2`
+ruby-3.1.2
 
 * System dependencies
 ```terminal
@@ -31,7 +31,9 @@ rails db:seed
 
 *Routes
 ```Ruby
-http://localhost:3000/brands
+GET /brands
+GET /brands/:id/models
+POST /brands
 ```
 
 * How to run the test suite
