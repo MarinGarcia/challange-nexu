@@ -34,6 +34,9 @@ rails db:seed
 GET /brands
 GET /brands/:id/models
 POST /brands
+POST /brands/:id/models
+PUT /models/:d
+GET /models?greater=&lower=
 ```
 
 * How to run the test suite

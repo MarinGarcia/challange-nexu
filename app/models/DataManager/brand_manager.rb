@@ -11,10 +11,10 @@ module DataManager
                       .select(:average_price)
                       .where(brand_id: brand.id)
         median_element = prices.length / 2
-        result << { 
+        result << {
           id: brand.id,
           name: brand.name,
-          average_price: prices[median_element]["average_price"]
+          average_price: prices[median_element]&.[](:average_price) || "0.0"
         }
       end
       { data: result, status: true }
