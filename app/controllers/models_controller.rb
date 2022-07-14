@@ -17,7 +17,10 @@ class ModelsController < ApplicationController
   end
 
   def show
-    render json: { message: "test" }
+    params = search_params
+    model_manager = DataManager::ModelManager
+    response = model_manager.list_with_range_price(params[:greater], params[:lower])
+    build_response(response)
   end
 
   private
@@ -28,6 +31,12 @@ class ModelsController < ApplicationController
 
   def id_param
     params.permit(:id)['id']
+  end
+
+  def search_params
+    greater = params.permit![:greater] || 0
+    lower = params.permit![:lower] || 0
+    { greater: greater, lower: lower }
   end
 
   def build_response(response)

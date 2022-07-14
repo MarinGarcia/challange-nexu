@@ -35,5 +35,14 @@ module DataManager
     rescue => e
       { data: [], status: false, message: e.message }
     end
+
+    def self.list_with_range_price(greater, lower)
+      models = Model.select(:id, :name, :average_price)
+                    .where( average_price: greater..lower)
+
+      { data: models, status: true }
+    rescue => e
+      { data: [], status: false, message: e.message }
+    end
   end
 end

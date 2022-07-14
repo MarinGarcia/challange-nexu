@@ -7,6 +7,7 @@ Things you may want to cover:
 
 * Ruby version
 ruby-3.1.2
+Rails 7.0.3.1
 
 * System dependencies
 ```terminal
@@ -40,3 +41,8 @@ GET /models?greater=&lower=
 ```
 
 * How to run the test suite
+```terminal
+rake db:migrate RAILS_ENV=test
+rake db:seed RAILS_ENV=test
+rspec
+```
